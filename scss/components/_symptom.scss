@@ -201,6 +201,7 @@
     @media (max-width: $xs) {
       width: 290px;
       transform: none;
+      height: auto;
     }
 
     .symptom-slider {
@@ -214,6 +215,7 @@
       padding-left: 0;
       padding-right: 0;
       width: 100%;
+      margin-top: 20px;
     }
   }
 }
@@ -295,6 +297,10 @@
     display: flex!important;
     position: absolute;
     bottom: 0;
+
+    @media (max-width: $xs) {
+      bottom: -30px;
+    }
 
     li {
       outline: none;
