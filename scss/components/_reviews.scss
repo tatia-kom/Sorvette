@@ -3,9 +3,20 @@
 .reviews {
   padding: 84px 0 48px;
 
+  @media (max-width: $sm) {
+    padding: 30px 0;
+  }
+
   &__button-wrap {
     display: flex;
     justify-content: center;
+  }
+
+  .title {
+    @media (max-width: $sm) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -19,6 +30,10 @@
 
   @media (max-width: $md) {
     max-width: 912px;
+  }
+
+  @media (max-width: $sm) {
+    max-width: 650px;
   }
 
   &__slide {
@@ -44,6 +59,11 @@
       width: 50px;
       height: 50px;
       z-index: 100;
+    }
+
+    @media (max-width: $sm) {
+      top: 50%;
+      transform: translateY(-50%);
     }
 
     &:hover {
@@ -72,6 +92,11 @@
         right: auto;
         left: 20px;
       }
+
+      @media (max-width: $sm) {
+        left: auto;
+        right: 100%;
+      }
     }
 
     &.slick-next {
@@ -80,6 +105,11 @@
       @media (max-width: $md) {
         left: auto;
         right: 20px;
+      }
+
+      @media (max-width: $sm) {
+        right: auto;
+        left: 100%;
       }
 
       &:before {

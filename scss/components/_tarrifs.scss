@@ -18,6 +18,10 @@
     margin-top: 40px;
   }
 
+  @media (max-width: $sm) {
+    display: block;
+  }
+
   &__slide {
     outline: none;
   }
@@ -37,6 +41,10 @@
 
   @media (max-width: $md) {
     width: 300px;
+  }
+
+  @media (max-width: $sm) {
+    width: auto;
   }
 
   &--hidden {

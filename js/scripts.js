@@ -2,8 +2,6 @@ $(document).ready(function() {
 
     var wh = $(window).height();
 
-    //restructSliders();
-
     $('.symptom-slider').slick({
         arrows: true,
         dots: true,
@@ -28,8 +26,24 @@ $(document).ready(function() {
         autoplay: false,
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 501,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
+
+    restructSliders();
 
     $(window).resize(function() {
         restructSliders();
@@ -155,9 +169,9 @@ $(document).ready(function() {
 
 function restructSliders() {
 
-    if ($(window).width() < 768) {
-        if (!$('.tariffs__flex').hasClass('slick-slider')) {
-            $('.tariffs__flex').slick({
+    if ($(window).width() < 992) {
+        if (!$('.tarrifs-slider').hasClass('slick-slider')) {
+            $('.tarrifs-slider').slick({
                 arrows: false,
                 dots: false,
                 autoplay: false,
@@ -170,8 +184,8 @@ function restructSliders() {
         }
     }
     else {
-        if ($('.tariffs__flex').hasClass('slick-slider')) {
-            $('.tariffs__flex').slick('unslick');
+        if ($('.tarrifs-slider').hasClass('slick-slider')) {
+            $('.tarrifs-slider').slick('unslick');
         }
     }
 }

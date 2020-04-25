@@ -170,6 +170,12 @@
     min-height: 90px;
     position: relative;
 
+    @media (max-width: $sm) {
+      font-size: 14px;
+      max-width: 280px;
+      padding-left: 25px;
+    }
+
     &:before {
       content: '';
       display: block;
@@ -180,6 +186,11 @@
       height: 14px;
       border-radius: 50%;
       background: $orange;
+
+      @media (max-width: $sm) {
+        width: 10px;
+        height: 10px;
+      }
     }
   }
 }

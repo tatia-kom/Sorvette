@@ -10,12 +10,20 @@
   justify-content: center;
   padding: 76px 0;
 
+  @media (max-width: $sm) {
+    padding: 50px 0;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
 
     .get-item__content {
       margin-right: 100px;
       width: 475px;
+
+      @media (max-width: $sm) {
+        width: 350px;
+      }
 
       &--hidden {
         transform: translateX(-300px);
@@ -26,6 +34,10 @@
   &--pink {
     background: rgba(255, 170, 98, 0.07);
     padding-top: 40px;
+
+    @media (max-width: $sm) {
+      padding-right: 20px;
+    }
   }
 
   &__img {
@@ -38,6 +50,11 @@
 
     @media (max-width: $md) {
       width: 350px;
+    }
+
+    @media (max-width: $sm) {
+      flex-shrink: 0;
+      width: 250px;
     }
 
     img {
@@ -62,6 +79,11 @@
       width: 450px;
     }
 
+    @media (max-width: $sm) {
+      flex-shrink: 0;
+      width: 350px;
+    }
+
     &--hidden {
       opacity: 0;
       transform: translateX(300px);
@@ -72,15 +94,30 @@
     font-weight: 900;
     font-size: 50px;
     line-height: 138.19%;
+
+    @media (max-width: $sm) {
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
 
   &__text {
     margin-left: 32px;
 
+    @media (max-width: $sm) {
+      margin-left: 20px;
+    }
+
     p {
       font-size: 25px;
       line-height: 38px;
       margin-bottom: 45px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -92,6 +129,11 @@
     font-size: 20px!important;
     line-height: 138.19%!important;
     margin-bottom: 35px!important;
+
+    @media (max-width: $sm) {
+      font-size: 14px!important;
+      margin-bottom: 15px!important;
+    }
 
     &:last-child {
       margin-bottom: 0!important;
