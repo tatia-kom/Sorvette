@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 
   @media (max-width: $lg) {
     max-width: 1200px;
@@ -23,6 +24,19 @@
     padding: 15px 0 25px;
   }
 
+  @media (max-width: $xs) {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    height: 50px;
+    transition: 0.3s;
+
+    &--opened_menu {
+      height: 159px;
+    }
+  }
+
   &__logo {
 
   }
@@ -30,6 +44,13 @@
   &__menu {
     display: flex;
     margin-top: 4px;
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin-top: 10px;
+    }
   }
 
   &__link {
@@ -45,12 +66,39 @@
       margin-left: 40px;
     }
 
+    @media (max-width: $xs) {
+      margin: 7px 0;
+    }
+
     &:first-child {
       margin-left: 0;
     }
 
     &:hover {
       color: $orange;
+    }
+  }
+
+  &__mobile-menu {
+    display: none;
+
+    @media (max-width: $xs) {
+      display: block;
+      background: transparent;
+      border: 0;
+      position: absolute;
+      top: 9px;
+      right: 15px;
+      z-index: 1000;
+
+      span {
+        width: 26px;
+        height: 2px;
+        margin: 5px 0;
+        background: $orange;
+        display: block;
+        border-radius: 4px;
+      }
     }
   }
 }

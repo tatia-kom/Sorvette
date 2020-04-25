@@ -3,6 +3,14 @@
 .program {
   background: rgba(255, 170, 98, 0.28);
   padding: 50px 0 88px;
+
+  @media (max-width: $xs) {
+    padding: 30px 0 50px;
+
+    .title {
+      margin: 0 15px;
+    }
+  }
 }
 
 .program-slider {
@@ -16,6 +24,10 @@
   @media (max-width: $md) {
     max-width: 912px;
     margin-top: 30px;
+  }
+
+  @media (max-width: $xs) {
+    margin-top: 20px;
   }
 
   &__slide {
@@ -104,6 +116,10 @@
       top: calc(100% + 30px);
     }
 
+    @media (max-width: $xs) {
+      top: calc(100% + 15px);
+    }
+
     li {
       outline: none;
       margin: 0 6px;
@@ -139,6 +155,10 @@
     padding: 40px;
   }
 
+  @media (max-width: $xs) {
+    padding: 20px 15px;
+  }
+
   &__title {
     font-family: $titleFont;
     font-weight: 800;
@@ -147,6 +167,11 @@
 
     @media (max-width: $md) {
       font-size: 24px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 18px;
+      line-height: 24px;
     }
   }
 }
@@ -159,6 +184,11 @@
 
   @media (max-width: $md) {
     margin-left: 0;
+  }
+
+  @media (max-width: $xs) {
+    column-count: 1;
+    margin-top: 0;
   }
 
   li {
@@ -176,6 +206,12 @@
       padding-left: 25px;
     }
 
+    @media (max-width: $xs) {
+      max-width: 100%;
+      min-height: 0;
+      padding-left: 20px;
+    }
+
     &:before {
       content: '';
       display: block;
@@ -190,6 +226,11 @@
       @media (max-width: $sm) {
         width: 10px;
         height: 10px;
+      }
+
+      @media (max-width: $xs) {
+        width: 8px;
+        height: 8px;
       }
     }
   }

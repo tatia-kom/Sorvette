@@ -3,6 +3,10 @@
 .understand {
   padding: 0 0 75px;
 
+  @media (max-width: $xs) {
+    padding: 40px 0;
+  }
+
   &__items {
     margin-top: 16px;
   }

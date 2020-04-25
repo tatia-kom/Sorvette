@@ -28,6 +28,11 @@
       padding: 30px 0 40px;
     }
 
+    @media (max-width: $xs) {
+      transform: translateY(-30px);
+      padding-bottom: 30px;
+    }
+
     .money__text {
       color: white!important;
     }
@@ -53,6 +58,10 @@
       @media (max-width: $md) {
         width: 250px;
       }
+
+      @media (max-width: $xs) {
+        transform: translateX(-130px);
+      }
     }
 
     &--right {
@@ -64,6 +73,10 @@
       @media (max-width: $md) {
         width: 200px;
         transform: translateX(300px);
+      }
+
+      @media (max-width: $xs) {
+        transform: translateX(150px);
       }
     }
 
@@ -84,6 +97,10 @@
       @media (max-width: $md) {
         bottom: -40px;
       }
+
+      @media (max-width: $xs) {
+        transform: translateX(-200px);
+      }
     }
 
     &--right3 {
@@ -96,6 +113,12 @@
         transform: translateX(336px + 40px);
         width: 120px;
         bottom: -80px;
+      }
+
+      @media (max-width: $xs) {
+        transform: translateX(220px);
+        width: 100px;
+        bottom: -30px;
       }
     }
 
@@ -114,6 +137,10 @@
       @media (max-width: $sm) {
         transform: translateX(-250px);
         top: -30px;
+      }
+
+      @media (max-width: $xs) {
+        transform: translateX(-180px);
       }
     }
 
@@ -137,6 +164,10 @@
         transform: translateX(200px);
         top: -80px;
       }
+
+      @media (max-width: $xs) {
+        transform: translateX(180px);
+      }
     }
 
     &--right5 {
@@ -153,6 +184,11 @@
         transform: translateX(350px);
         top: 0;
       }
+
+      @media (max-width: $xs) {
+        transform: translateX(270px);
+        top: 80px;
+      }
     }
   }
 
@@ -160,6 +196,10 @@
     text-align: center;
     max-width: 520px;
     margin: 0 auto;
+
+    @media (max-width: $xs) {
+      max-width: 290px;
+    }
 
     &--big {
       font-family: $titleFont;
@@ -169,6 +209,11 @@
 
       @media (max-width: $md) {
         font-size: 24px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 20px;
+        line-height: 20px;
       }
     }
 
@@ -200,6 +245,10 @@
 
       @media (max-width: $sm) {
         max-width: 500px!important;
+      }
+
+      @media (max-width: $xs) {
+        max-width: 290px!important;
       }
     }
   }

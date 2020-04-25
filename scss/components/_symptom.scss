@@ -24,6 +24,13 @@
     background-size: 145% 110%;
   }
 
+  @media (max-width: $xs) {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 50px;
+    background-size: cover;
+  }
+
   &__container {
     width: 1091px;
     margin: 0 auto;
@@ -42,6 +49,13 @@
     @media (max-width: $sm) {
       width: 728px;
     }
+
+    @media (max-width: $xs) {
+      flex-direction: column;
+      width: calc(100% - 30px);
+      margin: 0 15px;
+      align-items: center;
+    }
   }
 
   &__img {
@@ -57,6 +71,11 @@
 
     @media (max-width: $sm) {
       max-width: 270px;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 200px;
+      transform: translateX(-50px);
     }
   }
 
@@ -87,12 +106,23 @@
       transform: translate(-102px, -21px);
     }
 
+    @media (max-width: $xs) {
+      transform: translate(50px, -90px);
+      font-size: 18px;
+      line-height: 24px;
+      width: 175px;
+    }
+
     &--hidden {
       opacity: 0;
       transform: translate(30px, 30px);
 
       @media (max-width: $lg) {
         transform: translate(-100px, 50px);
+      }
+
+      @media (max-width: $xs) {
+        transform: translate(70px, -70px);
       }
     }
 
@@ -168,9 +198,22 @@
       transform: translateX(-80px);
     }
 
+    @media (max-width: $xs) {
+      width: 290px;
+      transform: none;
+    }
+
     .symptom-slider {
       height: 100%;
       margin-bottom: 29px;
+    }
+  }
+
+  .button {
+    @media (max-width: $xs) {
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
     }
   }
 }

@@ -10,6 +10,10 @@
   &__button-wrap {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $xs) {
+      margin-top: 40px;
+    }
   }
 
   .title {
@@ -34,6 +38,11 @@
 
   @media (max-width: $sm) {
     max-width: 650px;
+  }
+
+  @media (max-width: $xs) {
+    margin: 20px 0;
+    max-width: 100%;
   }
 
   &__slide {
@@ -114,6 +123,38 @@
 
       &:before {
         transform: scale(-1, 1);
+      }
+    }
+  }
+
+  .slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex!important;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% + 11px);
+
+    li {
+      outline: none;
+      margin: 0 6px;
+
+      &.slick-active {
+        button {
+          background: $orange;
+        }
+      }
+
+      button {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 170, 98, 0.13);
+        color: transparent;
+        font-size: 0;
       }
     }
   }

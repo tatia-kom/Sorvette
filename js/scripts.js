@@ -17,7 +17,15 @@ $(document).ready(function() {
         autoplay: false,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.reviews-slider').slick({
@@ -35,9 +43,19 @@ $(document).ready(function() {
                 }
             },
             {
+                breakpoint: 768,
+                settings: {
+                    dots: true,
+                    arrows: false,
+                    slidesToShow: 2
+                }
+            },
+            {
                 breakpoint: 501,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
                 }
             }
         ]
@@ -136,34 +154,14 @@ $(document).ready(function() {
 
     // menu
 
-    $('.top__mobile-button').click(function(e) {
+    $('.header__mobile-menu').click(function(e) {
         e.preventDefault();
         if (!$('.header').hasClass('header--opened_menu')) {
-
-            $('.top').addClass('top--opened_menu');
             $('.header').addClass('header--opened_menu');
         }
         else {
             $('.header').removeClass('header--opened_menu');
-            $('.top').removeClass('top--opened_menu');
         }
-    });
-
-    $('.scroll-to').click(function(e) {
-        e.preventDefault();
-        $('.header').removeClass('header--opened_menu');
-        $('.top').removeClass('top--opened_menu');
-        var scroll_el = $(this).attr('href');
-        var destination = $(scroll_el).offset().top;
-        if ($(window).width() < 768) {
-            if ($(this).attr('href') == '#who') {
-                destination += 210;
-            }
-            else {
-                destination -= 250;
-            }
-        }
-        $('html, body').animate( { scrollTop: destination }, 500 );
     });
 });
 
@@ -179,7 +177,15 @@ function restructSliders() {
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerPadding: '15px'
+                        }
+                    }
+                ]
             });
         }
     }
