@@ -8,7 +8,13 @@
 
   @media (max-width: $lg) {
     height: 700px;
-    background-size: 100% 110%;
+    background-size: 125% 110%;
+  }
+
+  @media (max-width: $md) {
+    padding-top: 120px;
+    padding-bottom: 0;
+    height: 650px;
   }
 
   &__container {
@@ -19,6 +25,23 @@
 
     @media (max-width: $lg) {
       width: 1000px;
+    }
+
+    @media (max-width: $md) {
+      width: 912px;
+      transform: none;
+    }
+  }
+
+  &__img {
+    @media (max-width: $md) {
+      max-width: 325px;
+      flex-shrink: 0;
+      margin-top: 50px;
+
+      img {
+        max-width: 100%;
+      }
     }
   }
 
@@ -34,6 +57,13 @@
     @media (max-width: $lg) {
       font-size: 35px;
       width: 325px;
+    }
+
+    @media (max-width: $md) {
+      font-size: 30px;
+      line-height: 40px;
+      width: 285px;
+      transform: translate(-115px, 0);
     }
 
     &--hidden {
@@ -54,6 +84,12 @@
       width: 221px;
       height: 213px;
       background: url('../img/cloud-arrow1.svg');
+      background-size: cover;
+
+      @media (max-width: $md) {
+        width: 170px;
+        height: 164px;
+      }
     }
 
     &:after {
@@ -65,6 +101,13 @@
       width: 218px;
       height: 201px;
       background: url('../img/cloud-arrow2.svg');
+      background-size: cover;
+
+      @media (max-width: $md) {
+        width: 165px;
+        height: 150px;
+        left: 50px;
+      }
     }
   }
 
@@ -73,6 +116,7 @@
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.03);
     border-radius: 30px;
     width: 362px;
+    height: 466px;
     flex-shrink: 0;
     padding: 38px 30px 55px 41px;
     display: flex;
@@ -80,6 +124,10 @@
 
     @media (max-width: $lg) {
       transform: translateX(-100px);
+    }
+
+    @media (max-width: $md) {
+      transform: translateX(-60px);
     }
 
     .symptom-slider {

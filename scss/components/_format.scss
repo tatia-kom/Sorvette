@@ -7,6 +7,10 @@
   &__item {
     max-width: 240px;
     margin: 38px 71px 0;
+
+    @media (max-width: $md) {
+      margin: 38px 40px 0;
+    }
   }
 
   &__text {

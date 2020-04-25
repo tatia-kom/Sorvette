@@ -10,11 +10,19 @@
 
   .title {
     margin: 31px 0 40px;
+
+    @media (max-width: $md) {
+      margin: 20px 0 30px;
+    }
   }
 
   &--orange {
     background: $orange;
     padding: 50px 0 60px;
+
+    @media (max-width: $md) {
+      padding: 30px 0 40px;
+    }
 
     .money__text {
       color: white!important;
@@ -37,6 +45,10 @@
       @media (max-width: $lg) {
         width: 350px;
       }
+
+      @media (max-width: $md) {
+        width: 250px;
+      }
     }
 
     &--right {
@@ -44,6 +56,11 @@
       top: -53px;
       left: 50%;
       transform: translateX(336px);
+
+      @media (max-width: $md) {
+        width: 200px;
+        transform: translateX(300px);
+      }
     }
 
     &--right2 {
@@ -59,6 +76,10 @@
         top: auto;
         bottom: 0;
       }
+
+      @media (max-width: $md) {
+        bottom: -40px;
+      }
     }
 
     &--right3 {
@@ -66,6 +87,12 @@
       bottom: -117px;
       left: 50%;
       transform: translateX(336px + 109px);
+
+      @media (max-width: $md) {
+        transform: translateX(336px + 40px);
+        width: 120px;
+        bottom: -80px;
+      }
     }
 
 
@@ -74,6 +101,11 @@
       top: -10px;
       right: 50%;
       transform: translateX(-438px);
+
+      @media (max-width: $md) {
+        width: 200px;
+        transform: translateX(-360px);
+      }
     }
 
     &--right4 {
@@ -86,6 +118,10 @@
         width: 200px;
         transform: translateX(350px);
         top: -30px;
+      }
+
+      @media (max-width: $md) {
+        transform: translateX(300px);
       }
     }
 
@@ -111,11 +147,20 @@
       font-weight: 800;
       font-size: 30px;
       line-height: 41px;
+
+      @media (max-width: $md) {
+        font-size: 24px;
+      }
     }
 
     &--middle {
       font-size: 25px;
       line-height: 34px;
+
+      @media (max-width: $md) {
+        font-size: 22px;
+        max-width: 600px!important;
+      }
     }
 
     &--small {

@@ -17,6 +17,10 @@
     max-width: 1000px;
   }
 
+  @media (max-width: $md) {
+    max-width: 912px;
+  }
+
   &__slide {
     outline: none;
   }
@@ -33,6 +37,14 @@
     color: transparent;
     font-size: 0;
     cursor: pointer;
+
+    @media (max-width: $md) {
+      top: 100%;
+      transform: translateY(40px);
+      width: 50px;
+      height: 50px;
+      z-index: 100;
+    }
 
     &:hover {
       background: #FF5757;
@@ -55,10 +67,20 @@
     &.slick-prev {
       z-index: 100;
       right: 100%;
+
+      @media (max-width: $md) {
+        right: auto;
+        left: 20px;
+      }
     }
 
     &.slick-next {
       left: 100%;
+
+      @media (max-width: $md) {
+        left: auto;
+        right: 20px;
+      }
 
       &:before {
         transform: scale(-1, 1);
@@ -75,6 +97,10 @@
   padding: 16px;
   height: 482px;
   display: flex;
+
+  @media (max-width: $md) {
+    height: 440px;
+  }
 
   img {
     max-width: 100%;

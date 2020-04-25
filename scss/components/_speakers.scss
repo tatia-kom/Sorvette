@@ -4,10 +4,18 @@
   background: rgba(179, 179, 179, 0.07);
   padding: 72px 0 96px;
   overflow-x: hidden;
+
+  @media (max-width: $md) {
+    padding: 40px 0;
+  }
 }
 
 .speaker {
   margin-top: 100px;
+
+  @media (max-width: $md) {
+    margin-top: 50px;
+  }
 
   &--reverse {
     .speaker__container {
@@ -43,6 +51,10 @@
     @media (max-width: $lg) {
       max-width: 1020px;
     }
+
+    @media (max-width: $md) {
+      max-width: 912px;
+    }
   }
 
   &__info {
@@ -57,6 +69,10 @@
 
     @media (max-width: $lg) {
       padding-left: 0;
+    }
+
+    @media (max-width: $md) {
+      width: calc(50% - 40px);
     }
 
     &:before {
@@ -79,7 +95,11 @@
     font-size: 14px;
     line-height: 141.69%;
     color: white;
-    margin: 16px 16px 0;
+    margin: 16px 16px 0 0;
+
+    @media (max-width: $md) {
+      margin-right: 0;
+    }
   }
 
   &__about {
@@ -124,6 +144,10 @@
 
   &__data {
     margin-left: 42px;
+
+    @media (max-width: $md) {
+      margin-left: 30px;
+    }
   }
 
   &__name {

@@ -58,6 +58,11 @@ footer {
     line-height: 54px;
     text-align: center;
     font-family: $titleFont;
+
+    @media (max-width: $md) {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 
 .button {
@@ -97,6 +102,10 @@ footer {
         margin: 60px 53px 0;
         transition: 0.5s;
 
+        @media (max-width: $md) {
+            margin: 60px 20px 0;
+        }
+
         &--hidden {
             opacity: 0;
             transform: translateY(-50px);
@@ -117,5 +126,9 @@ footer {
         font-size: 16px;
         line-height: 138.19%;
         margin-top: 32px;
+
+        @media (max-width: $md) {
+            font-size: 14px;
+        }
     }
 }

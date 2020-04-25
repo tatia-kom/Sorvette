@@ -3,12 +3,20 @@
 .tarrifs {
   padding: 99px 0 65px;
   overflow: hidden;
+
+  @media (max-width: $md) {
+    padding: 40px 0;
+  }
 }
 
 .tarrifs-slider {
   margin-top: 81px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: $md) {
+    margin-top: 40px;
+  }
 
   &__slide {
     outline: none;
@@ -25,6 +33,10 @@
 
   @media (max-width: $lg) {
     width: 350px;
+  }
+
+  @media (max-width: $md) {
+    width: 300px;
   }
 
   &--hidden {
