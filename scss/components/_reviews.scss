@@ -1,0 +1,80 @@
+@import "layout/var";
+
+.reviews {
+  padding: 84px 0 48px;
+
+  &__button-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.reviews-slider {
+  max-width: 1161px;
+  margin: 40px auto;
+
+  &__slide {
+    outline: none;
+  }
+
+  .slick-arrow {
+    display: block;
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    background: $orange;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: transparent;
+    font-size: 0;
+    cursor: pointer;
+
+    &:hover {
+      background: #FF5757;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 32px;
+      height: 22px;
+      background: url('../img/symptom-arrow.svg') no-repeat center;
+      background-size: cover;
+      top: 50%;
+      left: 50%;
+      margin-top: -11px;
+      margin-left: -16px;
+    }
+
+    &.slick-prev {
+      z-index: 100;
+      right: 100%;
+    }
+
+    &.slick-next {
+      left: 100%;
+
+      &:before {
+        transform: scale(-1, 1);
+      }
+    }
+  }
+}
+
+.review {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.09);
+  border-radius: 30px;
+  margin: 20px;
+  padding: 16px;
+  height: 482px;
+  display: flex;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  }
+}

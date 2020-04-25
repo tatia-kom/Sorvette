@@ -1,0 +1,38 @@
+@import "layout/var";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 44px 25px 30px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__logo {
+
+  }
+
+  &__menu {
+    display: flex;
+    margin-top: 4px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: black;
+    margin-left: 80px;
+    font-family: $titleFont;
+    font-weight: 600;
+    font-size: 16px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}

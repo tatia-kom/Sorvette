@@ -1,0 +1,160 @@
+@import "layout/var";
+
+.symptom {
+  height: 800px;
+  background: url('../img/clouds.svg') no-repeat top center;
+  background-size: 100% 105%;
+  padding: 160px 0;
+
+  &__container {
+    width: 1091px;
+    margin: 0 auto;
+    transform: translateX(-40px);
+    display: flex;
+  }
+
+  &__title {
+    text-align: left;
+    width: 388px;
+    flex-shrink: 0;
+    align-self: center;
+    transform: translateX(-150px);
+    position: relative;
+    transition: 0.9s;
+
+    &--hidden {
+      opacity: 0;
+      transform: translate(30px, 30px);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 45%;
+      right: 0;
+      width: 221px;
+      height: 213px;
+      background: url('../img/cloud-arrow1.svg');
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 52%;
+      left: 60px;
+      width: 218px;
+      height: 201px;
+      background: url('../img/cloud-arrow2.svg');
+    }
+  }
+
+  &__content {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.03);
+    border-radius: 30px;
+    width: 362px;
+    flex-shrink: 0;
+    padding: 38px 30px 55px 41px;
+    display: flex;
+    flex-direction: column;
+
+    .symptom-slider {
+      height: 100%;
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.symptom-slider {
+
+  &__slide {
+    outline: none;
+    transition: 0.3s;
+
+    &:not(.slick-active) {
+      opacity: 0;
+    }
+  }
+
+  &__name {
+    font-family: $titleFont;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 34px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--bold {
+      font-weight: 500;
+      line-height: 19px;
+    }
+  }
+
+  .slick-arrow {
+    display: block;
+    width: 32px;
+    height: 22px;
+    background: white url('../img/symptom-arrow.svg') no-repeat center;
+    background-size: cover;
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    top: 2px;
+
+    &.slick-prev {
+      right: 34px;
+      z-index: 100;
+    }
+
+    &.slick-next {
+      transform: scale(-1, 1);
+      right: -10px;
+    }
+
+    &.slick-disabled {
+      opacity: 0;
+    }
+  }
+
+  .slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex!important;
+    position: absolute;
+    bottom: 0;
+
+    li {
+      outline: none;
+      margin-right: 5px;
+
+      &.slick-active {
+        button {
+          background: $orange;
+        }
+      }
+
+      button {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgba(255, 170, 98, 0.13);
+        color: transparent;
+        font-size: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "layout/var";
+
+.format {
+  background: rgba(255, 170, 98, 0.07);
+  padding: 64px 0;
+
+  &__item {
+    max-width: 240px;
+    margin: 38px 71px 0;
+  }
+
+  &__text {
+    margin-top: 19px;
+  }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;800&display=swap&subset=cyrillic');
+
+//fonts
+
+$textFont: 'Roboto';
+$titleFont: 'Open Sans';
+
+//colors
+
+$orange: #FFAA62;
+
+//media
+
+$lg: 1421px;
+$md: 1199px;
+$sm: 991px;
+$xs: 767px;
+
+// mixins
+
+@mixin placeholderColor($color) {
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &::placeholder {
+    color: $color;
+  }
+}
