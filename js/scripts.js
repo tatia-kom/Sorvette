@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
     var wh = $(window).height();
+    var pillsScroll = $(window).width() < 768 ? 150 : 300;
+    var speakerScroll = $(window).width() < 768 ? 50 : 100;
 
     $('.symptom-slider').slick({
         arrows: true,
@@ -66,19 +68,19 @@ $(document).ready(function() {
     $(window).resize(function() {
         restructSliders();
 
+        if ($(window).width() < 768) {
+            pillsScroll = 150;
+            speakerScroll = 50;
+        }
+        else {
+            pillsScroll = 300;
+            speakerScroll = 100;
+        }
+
         wh = $(window).height();
     });
 
     $(window).scroll(function() {
-        if ($(window).scrollTop() > 0) {
-            $('.header').addClass('header--scroll');
-        }
-        else {
-            $('.header').removeClass('header--scroll');
-        }
-
-
-
 
         // animations
 
@@ -90,7 +92,7 @@ $(document).ready(function() {
             $('.symptom__title').addClass('symptom__title--hidden');
         }
 
-        if ($(window).scrollTop() > ($('.pills__img').offset().top - wh + 400)) {
+        if ($(window).scrollTop() > ($('.pills__img').offset().top - wh + pillsScroll)) {
             $('.pills__img').removeClass('pills__img--hidden');
         }
         else {
