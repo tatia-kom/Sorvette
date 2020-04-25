@@ -5,6 +5,10 @@
   background-size: 100%;
   padding: 72px 0 430px;
 
+  @media (max-width: $lg) {
+    padding-bottom: 350px;
+  }
+
   &__title {
     font-weight: bold;
     font-size: 25px;

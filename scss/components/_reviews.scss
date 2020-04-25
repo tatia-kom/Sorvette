@@ -13,6 +13,10 @@
   max-width: 1161px;
   margin: 40px auto;
 
+  @media (max-width: $lg) {
+    max-width: 1000px;
+  }
+
   &__slide {
     outline: none;
   }

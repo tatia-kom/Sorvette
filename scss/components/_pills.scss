@@ -10,6 +10,11 @@
     position: relative;
     transform: translateX(-100px);
 
+    @media (max-width: $lg) {
+      width: 650px;
+      transform: translateX(-50px);
+    }
+
     &:before {
       content: '';
       display: block;
@@ -22,6 +27,11 @@
       background: #FF5757;
       z-index: 0;
       transition: 0.8s;
+
+      @media (max-width: $lg) {
+        width: 448px;
+        height: 448px;
+      }
     }
 
     &:after {
@@ -36,6 +46,11 @@
       background: $orange;
       z-index: 0;
       transition: 0.8s;
+
+      @media (max-width: $lg) {
+        width: 356px;
+        height: 356px;
+      }
     }
 
     &--hidden {

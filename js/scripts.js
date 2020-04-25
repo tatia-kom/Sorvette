@@ -58,7 +58,7 @@ $(document).ready(function() {
             $('.symptom__title').addClass('symptom__title--hidden');
         }
 
-        if ($(window).scrollTop() > ($('.pills__img').offset().top - wh + 600)) {
+        if ($(window).scrollTop() > ($('.pills__img').offset().top - wh + 400)) {
             $('.pills__img').removeClass('pills__img--hidden');
         }
         else {

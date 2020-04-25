@@ -2,6 +2,7 @@
 
 .get {
   padding-top: 95px;
+  overflow: hidden;
 }
 
 .get-item {
@@ -31,9 +32,14 @@
     width: 520px;
     display: flex;
 
+    @media (max-width: $lg) {
+      width: 470px;
+    }
+
     img {
       display: block;
       margin: 0 auto;
+      max-width: 100%;
     }
   }
 
@@ -43,6 +49,10 @@
     align-self: center;
     margin-left: 50px;
     transition: 0.8s;
+
+    @media (max-width: $lg) {
+      width: 570px;
+    }
 
     &--hidden {
       opacity: 0;

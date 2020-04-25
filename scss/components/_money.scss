@@ -33,6 +33,10 @@
       top: -60px;
       right: 50%;
       transform: translateX(-280px);
+
+      @media (max-width: $lg) {
+        width: 350px;
+      }
     }
 
     &--right {
@@ -47,6 +51,14 @@
       top: 91px;
       left: 50%;
       transform: translateX(336px + 208px);
+
+      @media (max-width: $lg) {
+        left: auto;
+        right: 50%;
+        transform: translateX(-300px);
+        top: auto;
+        bottom: 0;
+      }
     }
 
     &--right3 {
@@ -69,6 +81,12 @@
       top: -70px;
       left: 50%;
       transform: translateX(438px);
+
+      @media (max-width: $lg) {
+        width: 200px;
+        transform: translateX(350px);
+        top: -30px;
+      }
     }
 
     &--right5 {
@@ -76,6 +94,10 @@
       top: 91px;
       left: 50%;
       transform: translateX(438px + 208px);
+
+      @media (max-width: $lg) {
+        transform: translateX(438px + 30px);
+      }
     }
   }
 

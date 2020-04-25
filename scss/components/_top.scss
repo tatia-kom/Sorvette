@@ -10,6 +10,11 @@
   &__content {
     width: 635px;
     margin-left: calc((100% - 1194px)/2);
+
+    @media (max-width: $lg) {
+      margin-left: calc((100% - 1000px)/2);
+      width: 545px;
+    }
   }
 
   &__title {
@@ -17,6 +22,10 @@
     font-size: 50px;
     font-family: $titleFont;
     line-height: 68px;
+
+    @media (max-width: $lg) {
+      font-size: 44px;
+    }
   }
 
   &__label {
@@ -66,5 +75,9 @@
     bottom: 0;
     right: calc((100% - 1344px)/2);
     transform: translateY(50%);
+
+    @media (max-width: $lg) {
+      right: calc((100% - 1104px)/2);
+    }
   }
 }

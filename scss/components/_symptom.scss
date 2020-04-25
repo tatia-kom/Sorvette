@@ -6,11 +6,20 @@
   background-size: 100% 105%;
   padding: 160px 0;
 
+  @media (max-width: $lg) {
+    height: 700px;
+    background-size: 100% 110%;
+  }
+
   &__container {
     width: 1091px;
     margin: 0 auto;
     transform: translateX(-40px);
     display: flex;
+
+    @media (max-width: $lg) {
+      width: 1000px;
+    }
   }
 
   &__title {
@@ -18,13 +27,22 @@
     width: 388px;
     flex-shrink: 0;
     align-self: center;
-    transform: translateX(-150px);
+    transform: translate(-150px, 0);
     position: relative;
     transition: 0.9s;
+
+    @media (max-width: $lg) {
+      font-size: 35px;
+      width: 325px;
+    }
 
     &--hidden {
       opacity: 0;
       transform: translate(30px, 30px);
+
+      @media (max-width: $lg) {
+        transform: translate(-100px, 50px);
+      }
     }
 
     &:before {
@@ -59,6 +77,10 @@
     padding: 38px 30px 55px 41px;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $lg) {
+      transform: translateX(-100px);
+    }
 
     .symptom-slider {
       height: 100%;
