@@ -4,69 +4,55 @@ $(document).ready(function() {
     var pillsScroll = $(window).width() < 768 ? 150 : 300;
     var speakerScroll = $(window).width() < 768 ? 50 : 100;
 
-    /*$('.symptom-slider').slick({
-        arrows: true,
-        dots: true,
-        autoplay: false,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1
-    });*/
 
+    $('.symptom-slider').addClass('owl-carousel');
     $('.symptom-slider').owlCarousel({
         items: 1,
         nav: true,
         dots: true
     });
 
-    $('.program-slider').slick({
-        arrows: true,
+    $('.program-slider').addClass('owl-carousel');
+    $('.program-slider').owlCarousel({
+        items: 1,
         dots: true,
-        autoplay: false,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false
-                }
+        loop: true,
+        responsive: {
+            0: {
+                nav: false
+            },
+            768: {
+                nav: true
             }
-        ]
+        }
     });
 
-    $('.reviews-slider').slick({
-        arrows: true,
-        dots: false,
-        autoplay: false,
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2
-                }
+    $('.reviews-slider').addClass('owl-carousel');
+    $('.reviews-slider').owlCarousel({
+        loop: true,
+        responsive: {
+            0: {
+                items: 1,
+                dots: true,
+                nav: false,
+                autoHeight: true
             },
-            {
-                breakpoint: 768,
-                settings: {
-                    dots: true,
-                    arrows: false,
-                    slidesToShow: 2
-                }
+            501: {
+                items: 2,
+                dots: true,
+                nav: false
             },
-            {
-                breakpoint: 501,
-                settings: {
-                    slidesToShow: 1,
-                    dots: true,
-                    arrows: false
-                }
+            768: {
+                items: 2,
+                dots: false,
+                nav: true
+            },
+            992: {
+                items: 3,
+                nav: true,
+                dots: false
             }
-        ]
+        }
     });
 
     restructSliders();
@@ -176,30 +162,26 @@ $(document).ready(function() {
 function restructSliders() {
 
     if ($(window).width() < 992) {
-        if (!$('.tarrifs-slider').hasClass('slick-slider')) {
-            $('.tarrifs-slider').slick({
-                arrows: false,
-                dots: false,
-                autoplay: false,
-                infinite: true,
-                centerMode: true,
-                centerPadding: '40px',
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            centerPadding: '15px'
-                        }
+        if (!$('.tarrifs-slider').hasClass('owl-carousel')) {
+            $('.tarrifs-slider').addClass('owl-carousel');
+            $('.tarrifs-slider').owlCarousel({
+                center: true,
+                loop: true,
+                responsive: {
+                    0: {
+                        items: 1.1
+                    },
+                    768: {
+                        items: 1.3
                     }
-                ]
+                }
             });
         }
     }
     else {
-        if ($('.tarrifs-slider').hasClass('slick-slider')) {
-            $('.tarrifs-slider').slick('unslick');
+        if ($('.tarrifs-slider').hasClass('owl-carousel')) {
+            $('.tarrifs-slider').removeClass('owl-carousel');
+            $('.tarrifs-slider').owlCarousel('destroy');
         }
     }
 }
