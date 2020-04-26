@@ -227,7 +227,7 @@
     transition: 0.3s;
 
     &:not(.slick-active) {
-      //opacity: 0;
+      opacity: 0;
     }
   }
 
@@ -245,7 +245,7 @@
 
   &__text {
     font-weight: 300;
-    font-size: 14px;
+    font-size: 14px!important;
     line-height: 20px;
     margin-bottom: 20px;
 
