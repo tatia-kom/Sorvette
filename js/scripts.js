@@ -4,13 +4,19 @@ $(document).ready(function() {
     var pillsScroll = $(window).width() < 768 ? 150 : 300;
     var speakerScroll = $(window).width() < 768 ? 50 : 100;
 
-    $('.symptom-slider').slick({
+    /*$('.symptom-slider').slick({
         arrows: true,
         dots: true,
         autoplay: false,
         infinite: false,
         slidesToShow: 1,
         slidesToScroll: 1
+    });*/
+
+    $('.symptom-slider').owlCarousel({
+        items: 1,
+        nav: true,
+        dots: true
     });
 
     $('.program-slider').slick({

@@ -226,7 +226,15 @@
     outline: none;
     transition: 0.3s;
 
-    &:not(.slick-active) {
+    /*&:not(.slick-active) {
+      opacity: 0;
+    }*/
+  }
+
+  .owl-item {
+    transition: 0.3s;
+
+    &:not(.active) {
       opacity: 0;
     }
   }
@@ -259,7 +267,42 @@
     }
   }
 
-  .slick-arrow {
+  .owl-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+
+    button {
+      display: block;
+      width: 32px;
+      height: 22px;
+      background: white url('../img/symptom-arrow.svg') no-repeat center!important;
+      background-size: cover!important;
+      font-size: 0!important;
+      color: transparent!important;
+      transition: 0.3s!important;
+
+      @media (max-width: $sm) {
+        width: 25px;
+        height: 17px;
+      }
+
+      &.owl-prev {
+        margin-right: 6px;
+      }
+
+      &.owl-next {
+        transform: scale(-1, 1);
+      }
+
+      &.disabled {
+        opacity: 0;
+      }
+    }
+  }
+
+  /*.slick-arrow {
     display: block;
     width: 32px;
     height: 22px;
@@ -288,9 +331,36 @@
     &.slick-disabled {
       opacity: 0;
     }
+  }*/
+
+  .owl-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex!important;
+    position: absolute;
+    bottom: 0;
+
+    @media (max-width: $xs) {
+      bottom: -30px;
+    }
+
+    .owl-dot {
+      margin-right: 5px;
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 170, 98, 0.13);
+      transition: 0.3s;
+
+      &.active {
+        background: $orange;
+      }
+    }
   }
 
-  .slick-dots {
+  /*.slick-dots {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -322,5 +392,5 @@
         font-size: 0;
       }
     }
-  }
+  }*/
 }
